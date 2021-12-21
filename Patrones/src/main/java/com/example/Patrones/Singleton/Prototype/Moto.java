@@ -21,4 +21,12 @@ public class Moto extends AutomovilShape{
 		
 	}
 	
+	public String toString() {
+		
+		String s = "Marca: " + this.marca + "\n";
+		s+= "Modelo: " + this.modelo + "\n";
+		s+= "Numero de Ruedas: " + this.nRuedas + "\n";
+		return s;
+	}
+	
 }

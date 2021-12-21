@@ -8,6 +8,9 @@ import com.example.Patrones.Singleton.Persona;
 import com.example.Patrones.Singleton.Prototype.Coche;
 import com.example.Patrones.Singleton.Prototype.Moto;
 
+import Builder.Usuario;
+import Builder.UsuarioBuilder;
+
 @SpringBootApplication
 public class PatronesApplication implements CommandLineRunner {
 
@@ -35,7 +38,16 @@ public class PatronesApplication implements CommandLineRunner {
 		Coche c1 = new Coche(4, "Seat", "Ibiza");
 		Moto m1 = new Moto(2, "Honda", "X230");
 		
-		System.out.println("Esta es la comproacion en la que los dos objetos estan clonados \n" + p1 +"\n"+ p2);
+		System.out.println("Esta es la comproacion en la que los dos objetos estan clonados \nCoche \n" + c1.toString() +"\nMoto \n"+ m1.toString());
+		
+		System.out.println("-------------------------------------------------------------------------------------------------");
+		
+	    Usuario usuario = new UsuarioBuilder()
+	            .email("nombre.apellido@gmail.com")
+	            .nombre("Nombre", "Apellido")
+	            .telefono("555123456")
+	            .direccion("c Rue el Percebe 13").build();   
+	      
 	}
 
 
